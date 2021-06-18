@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget id="mendix.paypal.Paypal" pluginWidget="true" needsEntityContext="true" offlineCapable="true"
+        supportedPlatform="Web"
+        xmlns="http://www.mendix.com/widget/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
+    <name>Paypal</name>
+    <description>My widget description</description>
+    <icon/>
+    <properties>
+        <propertyGroup caption="General">
+            <property key="clientID" type="expression" required="true">
+                <caption>Client ID</caption>
+                <description>The paypal client ID</description>
+                <returnType type="String" />
+            </property>
+            <property key="currency" type="expression" required="true">
+                <caption>Currency</caption>
+                <description>Three character currency ID like USD, EUR, GBP</description>
+                <returnType type="String" />                
+            </property>  
+            <property key="dataClientToken" type="expression" required="true">
+                <caption>Data Client Token</caption>
+                <description>Client token used for identifying your buyers.</description>
+                <returnType type="String" />                
+            </property>
+            <property key="intent" type="expression" required="true">
+                <caption>Inten</caption>
+                <description>etermines whether the funds are captured immediately on checkout or if the buyer authorizes the funds to be captured later.
+                Valid values are: capture, authorize, subscription, tokenize</description>
+                <returnType type="String" />                
+            </property>            
+        </propertyGroup>
+    </properties>
+</widget>
